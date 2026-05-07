@@ -1,0 +1,35 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.Python
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDEs
+.vscode/
+.idea/
+
+# Simulation outputs
+saved_simulations/
+*.gdf
+*.dat
+
+# Logs
+*.log
+
+# Perturbation experiment outputs
+results/
+pv_plot_data/
+pv_figures/

@@ -1,0 +1,18 @@
+# Python package requirements for the multilayer PFC microcircuit model.
+#
+# These are the minimal Python-side dependencies. Two non-pip components
+# must be installed separately into the conda environment first:
+#
+#   1. NEST Simulator (>= 3.7) -- the spiking network simulator
+#      https://nest-simulator.readthedocs.io/en/stable/installation/
+#
+#   2. NESTML (>= 7.0) -- compiles the AdEx + gap-junction neuron model
+#      https://nestml.readthedocs.io/en/latest/installation.html
+#
+# After installing NEST and NESTML, install the remaining requirements:
+#   pip install -r requirements.txt
+
+numpy>=1.24
+scipy>=1.10
+matplotlib>=3.7
+PyYAML>=6.0

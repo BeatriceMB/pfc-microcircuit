@@ -1,0 +1,32 @@
+#Simulation parameters
+delta_clock: .1 #Simulation time step (ms)
+seed: 3141774 #Use 0 for a random seed, Control seed: 3141774
+t_steps: 5000
+optimizing: 0 #Use 1 when running Bayesian optimization to find parameters
+
+#Test parameters
+#current_stimulus_tonic: 500          #Amount of current stimulus (pA)
+#current_stimulus_bursting: 300
+gap_junctions_enabled: 1       #0: Gap junctions disabled; 1: Gap junctions enabled
+noise_removed: 1                #0: Noise added to the network; 1: No noise in the network
+spatial_weight: 1               #0: Assign weights with a distribution; 1: use spatial parameters to determine weights
+spatial_sparsity: 1             #0: Assign sparsity with a distribution; 1: use spatial parameters to determine sparsity
+#Data analysis parameters
+calculate_balance: 0
+chop_edges_amount: 5000 #in time steps (ex. 5000*0.1 = 500 ms)
+convstd_rate: 200
+downsampling_convolved: 0
+high_pass_filtered: false
+remove_mean: false
+remove_silent: true
+save_results: 1
+save_as_svg: 1
+smoothing_window: 50 #Ex. 50: 50*0.1=5ms time window
+smoothing_window_indiv_neurons: 500 #Original: 500 
+sync_regularity: 0
+#Plot selection
+membrane_potential_plot: 1
+raster_plot: 1
+rate_coded_plot: 1
+isf_plot: 1
+plot_neuron_positions: 1

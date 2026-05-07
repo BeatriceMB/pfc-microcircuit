@@ -1,0 +1,43 @@
+# Conda environment specification for the multilayer PFC microcircuit model.
+#
+# Recommended installation (reproduces the development environment):
+#
+#   conda env create -f environment.yml
+#   conda activate nest-pfc
+#
+# After activation, install the AdEx + gap-junction NESTML neuron model:
+#
+#   cd installer_files
+#   python create_gap_enabled_aeif.py
+#
+# This environment was developed and tested on macOS (Apple Silicon) with
+# Python 3.11, NEST 3.9, and NESTML 8.2. Other platforms should work via
+# conda-forge but have not been explicitly tested.
+
+name: nest-pfc
+
+channels:
+  - conda-forge
+
+dependencies:
+  - python=3.11
+
+  # Spiking simulator
+  - nest-simulator=3.9
+
+  # Numerical and scientific stack
+  - numpy>=1.26
+  - scipy>=1.13
+  - matplotlib>=3.8
+  - pyyaml>=6.0
+
+  # Optional but useful for interactive analysis (Jupyter notebooks)
+  - ipykernel>=6.0
+
+  # NESTML and its dependencies (pip-installed; not on conda-forge)
+  - pip
+  - pip:
+      - nestml>=8.2
+      - odetoolbox>=2.5
+      - sympy>=1.14
+      - antlr4-python3-runtime>=4.13
