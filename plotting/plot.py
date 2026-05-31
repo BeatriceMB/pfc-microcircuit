@@ -470,7 +470,8 @@ def plot_neuron_positions(positions, spatial_radius, l5_z_min,
     ax_top.set_ylim(0, 2 * r_um)
     ax_top.set_xlabel('X (um)')
     ax_top.set_ylabel('Y (um)')
-
+    ax_top.set_title('Top view')
+                              
     all_pos = np.vstack([pn_l4, sst_l4, pn_l5, pv_l5])
     zmin, zmax = float(np.min(all_pos[:, 2])), float(np.max(all_pos[:, 2]))
     z_offset = -zmin
